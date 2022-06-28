@@ -24,6 +24,7 @@ function DemographicInfo(UID){
         Object.entries(demInfo).forEach(([key,value]) => {
             panel.append("h5").text(`${key.toUpperCase()}: ${value}`);
         });
+        buildGauge(demInfo.wfreq);
     })
 }
 
@@ -76,6 +77,8 @@ function BuildPlots(id){
 
     })
 }
+
+
 
 function optionChanged(id){
     BuildPlots(id);
